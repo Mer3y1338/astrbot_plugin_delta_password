@@ -1,0 +1,5 @@
+name: astrbot_plugin_delta_password
+version: 1.0.0
+description: 三角洲行动每日密码查询插件，发送 /密码 获取今日全地图密码
+author: Hermes
+homepage: https://github.com/Mer3y1338/astrbot_plugin_delta_password
