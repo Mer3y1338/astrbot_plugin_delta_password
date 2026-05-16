@@ -7,9 +7,7 @@ class DeltaPasswordPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
 
-    @filter.command("粥密码")
-    @filter.command("每日密码")
-    @filter.command("三角洲密码")
+    @filter.command("粥密码", alias={"每日密码", "三角洲密码"})
     async def deltaforce_daily_password(self, event: AstrMessageEvent):
         """查询三角洲行动各地图每日密码"""
         url = "https://tmini.net/api/sjzmm?type=json"
