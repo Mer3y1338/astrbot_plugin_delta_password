@@ -2,12 +2,14 @@ import aiohttp
 from astrbot.api.event import filter, AstrMessageEvent, MessageChain
 from astrbot.api.star import Context, Star, register
 
-@register("astrbot_plugin_delta_password", "Hermes", "三角洲行动每日密码查询插件", "1.0.0")
+@register("astrbot_plugin_delta_password", "Hermes", "三角洲行动每日密码查询插件", "1.0.1")
 class DeltaPasswordPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
 
-    @filter.command("密码")
+    @filter.command("粥密码")
+    @filter.command("每日密码")
+    @filter.command("三角洲密码")
     async def deltaforce_daily_password(self, event: AstrMessageEvent):
         """查询三角洲行动各地图每日密码"""
         url = "https://tmini.net/api/sjzmm?type=json"
